@@ -10,10 +10,8 @@ import android.util.Log;
 public class ScrollingActivity extends AppCompatActivity {
 
 
-
-    private static final String TAG = "ScrollingActivity";
     public static final String KEY = "key";
-
+    private static final String TAG = "ScrollingActivity";
     private SectionsPageAdapter mSectionsPageAdapter;
 
     private ViewPager mViewPager;
@@ -28,13 +26,13 @@ public class ScrollingActivity extends AppCompatActivity {
         mSectionsPageAdapter = new SectionsPageAdapter(getSupportFragmentManager());
 
         //set up ViewPager with the sections adapter
-        mViewPager = (ViewPager) findViewById(R.id.container);
+        mViewPager = findViewById(R.id.container);
         setupViewPager(mViewPager);
         //defines how many tabs before it destroys other tabs
         //set to a high number to prevent "loss" of data to the user perspective
         mViewPager.setOffscreenPageLimit(10);
 
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
+        TabLayout tabLayout = findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
 
     }

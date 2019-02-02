@@ -12,7 +12,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
-// When you press the button this sends you to the activity
+
+    // When you press the button this sends you to the activity
     public void scrollgo(View view) {
         Intent intent = new Intent(this, ScrollingActivity.class);
         startActivity(intent);

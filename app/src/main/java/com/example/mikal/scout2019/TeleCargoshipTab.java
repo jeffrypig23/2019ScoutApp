@@ -1,4 +1,5 @@
 package com.example.mikal.scout2019;
+
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -6,7 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 
-public class TeleCargoshipTab extends Fragment{
+public class TeleCargoshipTab extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
