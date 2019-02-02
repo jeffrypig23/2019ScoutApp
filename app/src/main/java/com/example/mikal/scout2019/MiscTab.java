@@ -12,19 +12,17 @@ import android.widget.TextView;
 
 public class MiscTab extends Fragment {
     private static final String TAG = "PrematchTab";
-
+    public static int minteger = 1; //makes integer
     private Button btnTEST;
     private TextView integer_number;
-    public static int minteger = 1; //makes integer
-
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.misc_tab, container, false); //creates UI
-        integer_number = (TextView) rootView.findViewById(R.id.integer_number); //finds the integer TextView
-        btnTEST = (Button) rootView.findViewById(R.id.btnTEST); //finds button
+        integer_number = rootView.findViewById(R.id.integer_number); //finds the integer TextView
+        btnTEST = rootView.findViewById(R.id.btnTEST); //finds button
 
         btnTEST.setOnClickListener(new View.OnClickListener() {
             @Override

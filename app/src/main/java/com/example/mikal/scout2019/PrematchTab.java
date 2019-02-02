@@ -12,8 +12,6 @@ public class PrematchTab extends Fragment {
     private static final String TAG = "PrematchTab";
 
 
-
-
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
