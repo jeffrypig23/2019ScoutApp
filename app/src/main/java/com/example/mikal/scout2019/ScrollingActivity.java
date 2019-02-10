@@ -43,8 +43,8 @@ public class ScrollingActivity extends AppCompatActivity {
         adapter.addFragment(new PrematchTab(), "Prematch");
         adapter.addFragment(new AutoTab(), "Auto");
         adapter.addFragment(new GamePieceTab(), "Game Pieces");
-        adapter.addFragment(new TeleCargoshipTab(), "Tele Cargoship");
         adapter.addFragment(new TeleRocketTab(), "Tele Rocket");
+        adapter.addFragment(new TeleCargoshipTab(), "Tele Cargoship");
         adapter.addFragment(new EndgameTab(), "Endgame");
         adapter.addFragment(new MiscTab(), "Misc");
 

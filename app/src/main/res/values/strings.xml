@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">AppsAreHard</string> <!-- Yep, but welcome to the world of android devs. my dude!-->
+    <string name="app_name">Scout2019</string> <!-- Yep, but welcome to the world of android devs. my dude!-->
     <string name="title_activity_scrolling">ScrollingActivity</string>
     <string name="large_text">
         "Material is the metaphor.\n\n"
