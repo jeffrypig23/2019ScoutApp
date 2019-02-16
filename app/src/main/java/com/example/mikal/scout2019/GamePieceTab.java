@@ -26,11 +26,11 @@ public class GamePieceTab extends Fragment {
         // Setup all the buttons that increase and decrease the things!
         // There was a bug where the cargo value could be negative... I don't know how this is possible to be honest, so I added a minimum and maximum value
         this.setupButton(R.id.tele_hp_pickup_int, R.id.tele_hatch_panel_pickup_plus, 0, 100, 1);
-        this.setupButton(R.id.tele_hp_pickup_int, R.id.tele_hatch_panel_pickup_minus, 0, 100, 1);
-        this.setupButton(R.id.tele_cargo_pickup_int, R.id.tele_cargo_pickup_plus, -5, 100, 1);
-        this.setupButton(R.id.tele_cargo_pickup_int, R.id.tele_cargo_pickup_minus, -5, 100, -1);
+        this.setupButton(R.id.tele_hp_pickup_int, R.id.tele_hatch_panel_pickup_minus, 0, 100, -1);
+        this.setupButton(R.id.tele_cargo_pickup_int, R.id.tele_cargo_pickup_plus, 0, 100, 1);
+        this.setupButton(R.id.tele_cargo_pickup_int, R.id.tele_cargo_pickup_minus, 0, 100, -1);
         this.setupButton(R.id.tele_hp_drop_int, R.id.tele_hatch_panel_drop_plus, 0, 100, 1);
-        this.setupButton(R.id.tele_hp_drop_int, R.id.tele_hatch_panel_drop_minus, 0, 100, 1);
+        this.setupButton(R.id.tele_hp_drop_int, R.id.tele_hatch_panel_drop_minus, 0, 100, -1);
         this.setupButton(R.id.tele_cargo_drop_int, R.id.tele_cargo_drop_plus, 0, 100, 1);
         this.setupButton(R.id.tele_cargo_drop_int, R.id.tele_cargo_drop_minus, 0, 100, -1);
         return this.root;

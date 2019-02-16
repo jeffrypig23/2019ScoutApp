@@ -49,13 +49,15 @@
         tools:text="-" />
 
     <TextView
-        android:id="@+id/HatchPanelPickupInteger"
+        android:id="@+id/integer_number"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp"
         android:text="0"
         android:textSize="40sp"
-        tools:layout_editor_absoluteX="160dp"
-        tools:layout_editor_absoluteY="44dp" />
+        app:layout_constraintStart_toEndOf="@+id/auto_low_hatchpanel_score_plus"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/CargoPickup"
