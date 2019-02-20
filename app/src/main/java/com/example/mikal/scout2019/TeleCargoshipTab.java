@@ -25,18 +25,11 @@ public class TeleCargoshipTab extends Fragment {
 
         // Setup all the buttons that increase and decrease the things!
         // There was a bug where the cargo value could be negative... I don't know how this is possible to be honest, so I added a minimum and maximum value
-        this.setupButton(R.id.tele_hp_cargoship_score_low_int, R.id.tele_hatch_panel_cargoship_score_low_plus, 0, 100, 1);
-        this.setupButton(R.id.tele_hp_cargoship_score_low_int, R.id.tele_hatch_panel_cargoship_score_low_minus, 0, 100, -1);
-        this.setupButton(R.id.tele_hp_cargoship_score_medium_int, R.id.tele_hatch_panel_cargoship_score_medium_plus, 0, 100, 1);
-        this.setupButton(R.id.tele_hp_cargoship_score_medium_int, R.id.tele_hatch_panel_cargoship_score_medium_minus, 0, 100, -1);
-        this.setupButton(R.id.tele_hp_cargoship_score_high_int, R.id.tele_hatch_panel_cargoship_score_high_plus, 0, 100, 1);
-        this.setupButton(R.id.tele_hp_cargoship_score_high_int, R.id.tele_hatch_panel_cargoship_score_high_minus, 0, 100, -1);
-        this.setupButton(R.id.tele_cargo_cargoship_score_low_int, R.id.tele_cargo_cargoship_score_low_plus, 0, 100, 1);
-        this.setupButton(R.id.tele_cargo_cargoship_score_low_int, R.id.tele_cargo_cargoship_score_low_minus, 0, 100, -1);
-        this.setupButton(R.id.tele_cargo_cargoship_score_medium_int, R.id.tele_cargo_cargoship_score_medium_plus, 0, 100, 1);
-        this.setupButton(R.id.tele_cargo_cargoship_score_medium_int, R.id.tele_cargo_cargoship_score_medium_minus, 0, 100, -1);
-        this.setupButton(R.id.tele_cargo_cargoship_score_high_int, R.id.tele_cargo_cargoship_score_high_plus, 0, 100, 1);
-        this.setupButton(R.id.tele_cargo_cargoship_score_high_int, R.id.tele_cargo_cargoship_score_high_minus, 0, 100, -1);
+        this.setupButton(R.id.tele_hp_cargoship_score_int, R.id.tele_hatch_panel_cargoship_score_plus, 0, 8, 1);
+        this.setupButton(R.id.tele_hp_cargoship_score_int, R.id.tele_hatch_panel_cargoship_score_minus, 0, 8, -1);
+        this.setupButton(R.id.tele_cargo_cargoship_score_int, R.id.tele_cargo_cargoship_score_plus, 0, 8, 1);
+        this.setupButton(R.id.tele_cargo_cargoship_score_int, R.id.tele_cargo_cargoship_score_minus, 0, 8, -1);
+
         return this.root;
     }
 
