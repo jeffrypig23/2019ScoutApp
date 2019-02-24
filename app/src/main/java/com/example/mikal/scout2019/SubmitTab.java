@@ -1,7 +1,6 @@
 package com.example.mikal.scout2019;
 
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -9,7 +8,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.TextView;
 
 import com.example.mikal.scout2019.database.DataSource;
 import com.example.mikal.scout2019.database.DbHelper;
@@ -44,18 +42,20 @@ public class SubmitTab extends Fragment {
     }
 
 
+    // Send the data to the db
+    public void AddData(int buttonID) {
+        Button button = this.root.findViewById(buttonID);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
+                // Create a new DbHelper object
+                DbHelper pineapple_belongs_on_pizza = new DbHelper(getContext());
 
-
-        // Send the data to the db
-        public void AddData(int buttonID) {
-            Button button = this.root.findViewById(buttonID);
-            button.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    DbHelper.addData();
-                }
-            });
-        }
+                // Call the addData function from said object
+                pineapple_belongs_on_pizza.addData("Enter data here...");
+            }
+        });
+    }
 
 }
