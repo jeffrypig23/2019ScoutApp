@@ -47,6 +47,7 @@ public class ScrollingActivity extends AppCompatActivity {
         adapter.addFragment(new TeleCargoshipTab(), "Tele Cargoship");
         adapter.addFragment(new EndgameTab(), "Endgame");
         adapter.addFragment(new MiscTab(), "Misc");
+        adapter.addFragment(new SubmitTab(), "Submit");
 
         viewPager.setAdapter(adapter);
 

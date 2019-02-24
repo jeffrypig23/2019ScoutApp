@@ -1,61 +1,123 @@
 package com.example.mikal.scout2019.model;
 
+import android.content.ContentValues;
+
+import com.example.mikal.scout2019.database.ItemsTable;
+
+import java.util.UUID;
+
 public class DataItem {
 
-    private String TABLE_ITEMS;
-    private String COLUMN_ID;
-    private int INT_1;
-    private int INT_2;
+    private String itemId;
+    private String itemName;
+    private String description;
+    private String category;
+    private int sortPosition;
+    private double price;
+    private String image;
 
     public DataItem() {
     }
 
-    public DataItem(String TABLE_ITEMS, String COLUMN_ID, int INT_1, int INT_2) {
-        this.TABLE_ITEMS = TABLE_ITEMS;
-        this.COLUMN_ID = COLUMN_ID;
-        this.INT_1 = INT_1;
-        this.INT_2 = INT_2;
+    public DataItem(String itemId, String itemName, String description, String category, int sortPosition, double price, String image) {
+
+        if (itemId == null){
+            itemId = UUID.randomUUID().toString();
+        }
+
+        this.itemId = itemId;
+        this.itemName = itemName;
+        this.description = description;
+        this.category = category;
+        this.sortPosition = sortPosition;
+        this.price = price;
+        this.image = image;
     }
 
-    public String getTABLE_ITEMS() {
-        return TABLE_ITEMS;
+    public String getItemId() {
+        return itemId;
     }
 
-    public void setTABLE_ITEMS(String TABLE_ITEMS) {
-        this.TABLE_ITEMS = TABLE_ITEMS;
+    public void setItemId(String itemId) {
+        this.itemId = itemId;
     }
 
-    public String getCOLUMN_ID() {
-        return COLUMN_ID;
+    public String getItemName() {
+        return itemName;
     }
 
-    public void setCOLUMN_ID(String COLUMN_ID) {
-        this.COLUMN_ID = COLUMN_ID;
+    public void setItemName(String itemName) {
+        this.itemName = itemName;
     }
 
-    public int getINT_1() {
-        return INT_1;
+    public String getDescription() {
+        return description;
     }
 
-    public void setINT_1(int INT_1) {
-        this.INT_1 = INT_1;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
-    public int getINT_2() {
-        return INT_2;
+    public String getCategory() {
+        return category;
     }
 
-    public void setINT_2(int INT_2) {
-        this.INT_2 = INT_2;
+    public void setCategory(String category) {
+        this.category = category;
     }
+
+    public int getSortPosition() {
+        return sortPosition;
+    }
+
+    public void setSortPosition(int sortPosition) {
+        this.sortPosition = sortPosition;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
+
+    public ContentValues toValues(){
+        ContentValues values = new ContentValues();
+
+        values.put(ItemsTable.COLUMN_ID, itemId);
+        values.put(ItemsTable.COLUMN_NAME, itemName);
+        values.put(ItemsTable.COLUMN_DESCRIPTION, description);
+        values.put(ItemsTable.COLUMN_CATEGORY, category);
+        values.put(ItemsTable.COLUMN_POSITION, sortPosition);
+        values.put(ItemsTable.COLUMN_PRICE, price);
+        values.put(ItemsTable.COLUMN_IMAGE, image);
+        return values;
+    }
+
 
     @Override
     public String toString() {
         return "DataItem{" +
-                "TABLE_ITEMS='" + TABLE_ITEMS + '\'' +
-                ", COLUMN_ID='" + COLUMN_ID + '\'' +
-                ", INT_1=" + INT_1 +
-                ", INT_2=" + INT_2 +
+                "itemId='" + itemId + '\'' +
+                ", itemName='" + itemName + '\'' +
+                ", description='" + description + '\'' +
+                ", category='" + category + '\'' +
+                ", sortPosition=" + sortPosition +
+                ", price=" + price +
+                ", image='" + image + '\'' +
                 '}';
     }
+
+
 }
+
+
